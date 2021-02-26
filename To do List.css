@@ -1,0 +1,49 @@
+ิbody
+{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.intro{
+    height: 100vh;
+    background: radial-gradient(rgb(8, 193, 240),#a29dee);
+}
+
+table{
+    margin-top: 1%;
+    margin-left: 42%;
+    border: 10px double black;
+}
+
+tr th{
+    font-size: 250%;
+    font-family: 'Akaya Telivigala', cursive;
+    text-align: center;
+}
+
+.icon{
+    width: 35px;
+    height: 35px;
+}
+
+.input{
+    margin-left: 1%;
+    font-size: 150%;
+}
+
+li{
+    list-style-type: none;
+    font-size: 30px;
+}
+
+ul li.checked {
+    color: rgb(248, 2, 2);
+    text-decoration: line-through;
+    text-decoration-color: rgb(0, 0, 0);
+  }
+
+.title{
+    height: 25%;
+    width: 13%;
+    margin-left: 46%;
+}
