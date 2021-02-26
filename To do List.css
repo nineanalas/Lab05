@@ -1,49 +1,78 @@
-ิbody
+h1
 {
-    background-color: rgb(0, 0, 0);
+    font-size: 50px;
+}
+
+ul
+{
+    margin: 0;
+    padding: 0;
+}
+  
+ul li 
+{
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: lightgray;
+    font-size: 18px;
+}
+  
+ul li.check 
+{
+    background: black;
+    color: white;
+    text-decoration: line-through;
+}
+
+.close 
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+  
+.close:hover
+{
+    background-color: red;
     color: white;
 }
-
-.intro{
-    height: 100vh;
-    background: radial-gradient(rgb(8, 193, 240),#a29dee);
-}
-
-table{
-    margin-top: 1%;
-    margin-left: 42%;
-    border: 10px double black;
-}
-
-tr th{
-    font-size: 250%;
-    font-family: 'Akaya Telivigala', cursive;
+  
+.header 
+{
+    background-color: lightblue;
+    padding: 30px 40px;
+    color: black;
     text-align: center;
 }
-
-.icon{
-    width: 35px;
-    height: 35px;
+  
+.header:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+input 
+{
+    margin-left: 60px;
+    border: none;
+    border-radius: 0;
+    width: 70%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
 }
 
-.input{
-    margin-left: 1%;
-    font-size: 150%;
-}
-
-li{
-    list-style-type: none;
-    font-size: 30px;
-}
-
-ul li.checked {
-    color: rgb(248, 2, 2);
-    text-decoration: line-through;
-    text-decoration-color: rgb(0, 0, 0);
-  }
-
-.title{
-    height: 25%;
-    width: 13%;
-    margin-left: 46%;
+.button 
+{
+    padding: 10px;
+    width: 20%;
+    background: lightgray;
+    color: black;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;  
 }

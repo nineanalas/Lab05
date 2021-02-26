@@ -1,65 +1,45 @@
-const subbtn = document.getElementById("summitbtn");
-const enter = document.getElementById("data");
-subbtn.addEventListener('click',newElement);
-enter.addEventListener('keyup',newElement);
-
-
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var span2 = document.createElement("SPAN");
-  var txt = document.createTextNode("");
-  span.className = "close";
-  span2.className = "far fa-trash-alt";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-
-
 var close = document.getElementsByClassName("close");
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
+for (var i=0;i<close.length;i++) 
+{
+  close[i].onclick = function()
+  {
     var div = this.parentElement;
     div.style.display = "none";
   }
 }
 
-
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
+var list = document.querySelector("ul");
+list.addEventListener("click", function(ev)
+{
+  if (ev.target.tagName === "LI") 
+    ev.target.classList.toggle("check");
 }, false);
 
-function newElement() {
-  if(event.key === "Enter" || event.button === 0){
-    var list = document.createElement("li");
-    var inputValue = document.getElementById("data").value;
-    var valueText = document.createTextNode(" "+inputValue);
-    
-    if (inputValue === '') {
-      alert("คุณต้องระบุข้อมูลก่อน");
-    } else {
-      document.getElementById("myList").appendChild(list);
-    }
-    document.getElementById("data").value = "";
-    var span = document.createElement("SPAN");
-    var span2 = document.createElement("SPAN");
-    var txt = document.createTextNode("");
-    span.className = "close";
-    span2.className = "far fa-trash-alt";
-    span.appendChild(txt);
-    span.appendChild(span2);
-    list.appendChild(span);
-    list.appendChild(valueText);
+function addnewtodo()
+{
+  var li = document.createElement("li");
+  var input = document.getElementById("input").value;
+  var content = document.createTextNode(input);
+  li.appendChild(content);
 
-    for (i = 0; i < close.length; i++) {
-      close[i].onclick = function() {
-        var div = this.parentElement;
-        div.style.display = "none";
-      }
+  if (input === "")
+    alert("Please enter information.");
+  else
+    document.getElementById("ul").appendChild(li);
+
+  document.getElementById("input").value = "";
+  var span = document.createElement("span");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i=0;i<close.length;i++) 
+  {
+    close[i].onclick = function()
+    {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
   }
-}
 }
